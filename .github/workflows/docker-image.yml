@@ -50,9 +50,9 @@ jobs:
           --cache-from type=registry,ref=${{ steps.login-ecr.outputs.registry }}/quant11-production-backend-cache-image \
           -f Dockerfile .
 
-    # - name: Set image output
-    #   id: set-image-output
-    #   run: echo "image=${{ steps.login-ecr.outputs.registry }}/quant11-production-backend:${{ steps.extract_sha.outputs.sha }}" >> $GITHUB_OUTPUT
+    - name: Set image output
+      id: set-image-output
+      run: echo "image=${{ steps.login-ecr.outputs.registry }}/quant11-production-backend:${{ steps.extract_sha.outputs.sha }}" >> $GITHUB_OUTPUT
 
     # Update New Image In Task Definition 
     # - name: Update New image in Task Definition
