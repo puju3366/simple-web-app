@@ -40,7 +40,7 @@ jobs:
     #   uses: docker/setup-buildx-action@v3
 
     - name: list out present working directory
-      uses: ls -la 
+      run: ls -la
     # - name: Build docker image and push with caching
     #   id: build-image
     #   run: |
